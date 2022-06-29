@@ -13,7 +13,7 @@ export default function App() {
         <ResponsiveDrawer />
       </ThemeProvider>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/busca-cep" element={<BuscaCep />} />
       </Routes>
     </>

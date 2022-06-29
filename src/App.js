@@ -14,7 +14,7 @@ export default function App() {
       </ThemeProvider>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="#buscacep" element={<BuscaCep />} />
+        <Route path="/busca-cep" element={<BuscaCep />} />
       </Routes>
     </>
   );

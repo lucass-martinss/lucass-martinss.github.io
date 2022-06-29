@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Grid } from "@mui/material"
+import {  Grid } from "@mui/material"
 import ImagePortifolio from "../components/ImagePortifolio";
 
 const drawerWidth = 240;

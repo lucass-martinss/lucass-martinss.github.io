@@ -7,6 +7,10 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@fontsource/nuosu-sil": "^4.5.0",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@mui/icons-material": "^5.8.0",
     "@mui/material": "^5.8.1",
     "@testing-library/jest-dom": "^5.16.4",
@@ -46,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.17.12",
     "react-router-dom": "^6.3.0"
   }
 }

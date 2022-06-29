@@ -3,7 +3,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { AppBar, Box, Stack, Item, Grid } from "@mui/material";
+import { AppBar, Box, Stack,} from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
@@ -15,12 +15,17 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Container } from "@mui/system";
 import PropTypes from "prop-types";
 import * as React from "react";
-import { Link } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
+import CodeIcon from "@mui/icons-material/Code";
+import HtmlIcon from "@mui/icons-material/Html";
+import CssIcon from "@mui/icons-material/Css";
+import JavascriptIcon from "@mui/icons-material/Javascript";
+ 
 
 const drawerWidth = 220;
+
 
 export function ResponsiveDrawer(props) {
   const { window } = props;
@@ -32,7 +37,7 @@ export function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-      <Toolbar>
+      <Toolbar sx={{justifyContent:"space-evenly"}}>
         <IconButton
           target="_blank"
           href="https://www.linkedin.com/in/lucasoft/"
@@ -66,23 +71,35 @@ export function ResponsiveDrawer(props) {
 
       <List>
         <ListItem>
-          <ListItemButton>
-          <Link to="/">Home</Link>
-         
-            
-
-            <ListItemIcon />
-           
+          <ListItemButton to="/">
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary="About me" />
           </ListItemButton>
-          
         </ListItem>
+
         <ListItem>
-        <ListItemButton>
-         <Link to="/busca-cep">busca cep</Link>
-         </ListItemButton>
-         </ListItem>
+          <ListItemButton to="/busca-cep">
+            <ListItemIcon>
+              <CodeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Busca Cep" />
+          </ListItemButton>
+        </ListItem>
       </List>
       <Divider />
+
+    <Stack direction="row" justifyContent="space-evenly" sx={{marginTop:"10px"}}>
+        <img width={40} alt="logo react" src="/react.svg" />
+          
+            <img width={40} alt="logo css3" src="/css3.svg"/>
+        
+            <img width={36} alt="logo javascript" src="/javascript.svg" />
+         
+            <img width={40} alt="logo html5" src="/html-5.svg" />
+            </Stack>
+         
     </div>
   );
 

@@ -22,10 +22,8 @@ import CodeIcon from "@mui/icons-material/Code";
 import HtmlIcon from "@mui/icons-material/Html";
 import CssIcon from "@mui/icons-material/Css";
 import JavascriptIcon from "@mui/icons-material/Javascript";
- 
 
 const drawerWidth = 220;
-
 
 export function ResponsiveDrawer(props) {
   const { window } = props;
@@ -37,7 +35,7 @@ export function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-      <Toolbar sx={{justifyContent:"space-evenly"}}>
+      <Toolbar sx={{ justifyContent: "space-evenly" }}>
         <IconButton
           target="_blank"
           href="https://www.linkedin.com/in/lucasoft/"
@@ -99,16 +97,24 @@ export function ResponsiveDrawer(props) {
       </List>
       <Divider />
 
-    <Stack direction="row" justifyContent="space-evenly" sx={{marginTop:"10px"}}>
-        <img width={40} alt="logo react" src="/react.svg" />
-          
-            <img width={40} alt="logo css3" src="/css3.svg"/>
-        
-            <img width={36} alt="logo javascript" src="/javascript.svg" />
-         
-            <img width={40} alt="logo html5" src="/html-5.svg" />
-            </Stack>
-         
+      <Stack
+        direction="row"
+        justifyContent="space-evenly"
+        sx={{ marginTop: "10px" }}
+      >
+        <IconButton target="_blank" href="https://reactjs.org/">
+          <img width={40} alt="logo react" src="/react.svg" />
+        </IconButton>
+        <IconButton target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+          <img width={40} alt="logo css3" src="/css3.svg" />
+        </IconButton>
+        <IconButton target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">
+         <img width={37} alt="logo javascript" src="/javascript.svg" />
+        </IconButton>
+        <IconButton target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">
+          <img width={40} alt="logo html5" src="/html-5.svg" />
+        </IconButton>
+      </Stack>
     </div>
   );
 

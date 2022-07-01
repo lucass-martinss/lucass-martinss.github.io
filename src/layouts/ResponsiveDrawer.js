@@ -3,7 +3,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { AppBar, Box, Stack,} from "@mui/material";
+import { AppBar, Box, Stack, Link} from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
@@ -102,18 +102,18 @@ export function ResponsiveDrawer(props) {
         justifyContent="space-evenly"
         sx={{ marginTop: "10px" }}
       >
-        <IconButton target="_blank" href="https://reactjs.org/">
+        <Link target="_blank" href="https://reactjs.org/">
           <img width={40} alt="logo react" src="/react.svg" />
-        </IconButton>
-        <IconButton target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+        </Link>
+        <Link target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">
           <img width={40} alt="logo css3" src="/css3.svg" />
-        </IconButton>
-        <IconButton target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">
-         <img width={37} alt="logo javascript" src="/javascript.svg" />
-        </IconButton>
-        <IconButton target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">
+        </Link>
+        <Link target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">
+         <img width={36} alt="logo javascript" src="/javascript.svg" style={{marginTop:"2px"}} />
+        </Link>
+        <Link target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">
           <img width={40} alt="logo html5" src="/html-5.svg" />
-        </IconButton>
+        </Link>
       </Stack>
     </div>
   );

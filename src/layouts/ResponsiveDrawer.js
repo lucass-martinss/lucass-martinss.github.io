@@ -87,6 +87,15 @@ export function ResponsiveDrawer(props) {
             <ListItemText primary="Busca Cep" />
           </ListItemButton>
         </ListItem>
+
+        <ListItem>
+          <ListItemButton target="_blank" to="https://vivazbrand.com.br/">
+            <ListItemIcon>
+              <img alt="icone vivaz" src="/vivaz-icon.png" />
+            </ListItemIcon>
+            <ListItemText primary="Site Vivaz" />
+          </ListItemButton>
+        </ListItem>
       </List>
       <Divider />
 

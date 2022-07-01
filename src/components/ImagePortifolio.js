@@ -5,9 +5,8 @@ import portifolioPerfil from './portifolio-perfil.jpeg';
 
 export default function ImagePortifolio() {
   return (
-   
-      <Avatar alt="Lucas Cardoso" src={portifolioPerfil} sx={{width:200, height:200,}} />
-   
+
+      <img  style={{borderRadius:"50%", width:"100%"}} alt="Lucas Cardoso" src={portifolioPerfil}  />
 
   );
 }

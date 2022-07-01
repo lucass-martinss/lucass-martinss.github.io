@@ -1,8 +1,4 @@
 import {
-  Link as RouterLink,
-  Route,
-  Routes,
-  MemoryRouter,
   useLocation,
 } from "react-router-dom";
 import { Typography } from "@mui/material";

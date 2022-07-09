@@ -5,20 +5,21 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
-import { Stack } from "@mui/material";
-
+import Stack from "@mui/material/Stack"
+import "../../App.css"
 export default function CepCard(props) {
   const { index, address } = props;
  
   return (
-    <Card sx={{ width: "357px", boxShadow: "none", overflow:"visible" }}>
+    <Card  sx={{ width: "357px", boxShadow: "none", overflow:"visible" }}>
       <CardMedia
+        sx={{marginTop:"20px"}}
         component="img"
         height="140"
         image={address.image}
         alt="green iguana"
       />
-      <CardContent sx={{paddingBottom:"16px !important"}}>
+      <CardContent sx={{paddingBottom:"16px"}}>
         <Typography gutterBottom variant="h5" component="div">
           {address.localidade}-{address.uf}
         </Typography>

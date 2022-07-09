@@ -1,21 +1,23 @@
 import theme from "./components/Theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import { ResponsiveDrawer } from "./layouts/ResponsiveDrawer";
-import BuscaCep from "./packages/layouts/Main";
+import BuscaCep from "../src/layouts/Main";
+import Home from "./pages/AboutMe";
 
 export default function App() {
-  console.log(theme);
+  
   return (
     <>
+  
       <ThemeProvider theme={theme}>
         <ResponsiveDrawer />
       </ThemeProvider>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/busca-cep" element={<BuscaCep />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/busca-cep" element={<BuscaCep />} />
+        </Routes>
+      
     </>
   );
 }

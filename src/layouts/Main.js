@@ -1,8 +1,11 @@
-import CepTextField from "../components/CepTextField";
-import SearchButton from "../components/SearchButton";
-import { Divider, Stack, Container, Paper } from "@mui/material";
+import CepTextField from "../components/inputs/CepTextField";
+import SearchButton from "../components/buttons/SearchButton";
+import { Stack, Container, Paper, Typography } from "@mui/material";
 import { useState } from "react";
-import CepCard from "./CepCard";
+import CepCard from "../components/cards/CepCard";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "../components/Theme";
+
 
 export default function Main() {
   const [cep, setCep] = useState("");
@@ -10,18 +13,15 @@ export default function Main() {
 
   const handleChange = (event) => {
     setCep(event.target.value);
-    console.log(cep);
   };
 
   const handleClick = async () => {
-    console.log(`Buscar cep: ${cep}`);
     const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
     const json = await response.json();
     const apiKey = "AIzaSyAuGnaUg-Tv-BVU-eaipXfdXArTIYV4BwY";
     json.image = `https://maps.googleapis.com/maps/api/streetview?size=408x544&location=${json.logradouro},${json.bairro}&key=${apiKey}`;
     const newAddressList = addressList === [] ? [json] : [json, ...addressList];
     setAddressList(newAddressList);
-    console.log(json);
   };
 
   const handleDelete = (index) => {
@@ -31,10 +31,10 @@ export default function Main() {
   };
 
   return (
-    <Container className="main" maxWidth="xs">
-      <Paper elevation={3}>
-        <Stack direction="column" gap="10px" sx={{ alignItems: "center" }}>
-          <h3>Search your address in Brazil</h3>
+    <Container  maxWidth="xs" sx={{textAlign:"center"}}>
+      <ThemeProvider theme={theme}>
+         <Typography variant="h2" className="title">Search your address in Brazil</Typography>
+       </ThemeProvider>
           <form
             id="my-form-id"
             onSubmit={(e) => {
@@ -43,26 +43,22 @@ export default function Main() {
               setCep("");
             }}
           >
-            <Stack
+            <Stack mt={5} sx={{justifyContent:"center"}}
               direction="row"
-              divider={
-                <Divider
-                  orientation="vertical"
-                  sx={{ height: "41px" }}
-                  flexItem
-                />
-              }
               spacing={1}
             >
               <CepTextField
-                helperText="Digite o CEP com 8 caracteres."
                 value={cep}
                 onChange={handleChange}
-                error={cep.length !== 8 && cep.length !== 0}
+                error={cep.length !== 0 && cep.length !== 9}
+                      
               />
-              <SearchButton type="submit" disabled={cep.length !== 8} />
+              <SearchButton type="submit" disabled={cep.length !== 9} />
             </Stack>
           </form>
+      <Paper sx={{marginTop:"20px"}} elevation={3} >
+        <Stack direction="column"  sx={{ alignItems: "center" }}>
+         
           {Array.from(addressList.entries()).map(([index, address]) => (
             <CepCard
               key={index}

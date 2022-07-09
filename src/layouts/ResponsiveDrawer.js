@@ -1,27 +1,15 @@
-import GitHubIcon from "@mui/icons-material/GitHub";
+import PropTypes from "prop-types";
+import * as React from "react";
+import GitHubIcon  from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { AppBar, Box, Stack, Link} from "@mui/material";
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import PropTypes from "prop-types";
-import * as React from "react";
+import { Typography, Toolbar, ListItemText, ListItemIcon, 
+         ListItemButton, ListItem, List, IconButton, AppBar,
+         Box, Stack, Link,CssBaseline, Divider, Drawer } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import CodeIcon from "@mui/icons-material/Code";
-import HtmlIcon from "@mui/icons-material/Html";
-import CssIcon from "@mui/icons-material/Css";
-import JavascriptIcon from "@mui/icons-material/Javascript";
 
 const drawerWidth = 220;
 
@@ -35,7 +23,8 @@ export function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-      <Toolbar sx={{ justifyContent: "space-evenly" }}>
+      <Toolbar className="contato" 
+      sx={{ justifyContent: "space-evenly" }}>
         <IconButton
           target="_blank"
           href="https://www.linkedin.com/in/lucasoft/"
@@ -100,7 +89,7 @@ export function ResponsiveDrawer(props) {
       <Stack
         direction="row"
         justifyContent="space-evenly"
-        sx={{ marginTop: "10px" }}
+        mt={2}
       >
         <Link target="_blank" href="https://reactjs.org/">
           <img width={40} alt="logo react" src="/react.svg" />
@@ -145,7 +134,7 @@ export function ResponsiveDrawer(props) {
           <Typography variant="h1">Lucas Cardoso - Web Developer</Typography>
         </Toolbar>
       </AppBar>
-      <Box
+      <Box 
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"

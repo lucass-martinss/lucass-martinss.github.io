@@ -3,7 +3,7 @@ import "@fontsource/nuosu-sil";
 
 export default function Header(){
     return(
-        <Container className="header" maxWidth="md">
+        <Container className="header" maxWidth="sm">
             <Stack direction="column" spacing={-3} >
                 <h2>Lucas Cardoso</h2>
                 <p>Web Developer</p>

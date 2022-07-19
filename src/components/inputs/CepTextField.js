@@ -1,8 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { IMaskInput } from 'react-imask';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import FormControl from '@mui/material/FormControl';
+import { FormHelperText, FormControl, OutlinedInput } from '@mui/material';
 import "./inputs.css"
 
 const TextMaskCustom = React.forwardRef(function TextMaskCustom(props) {
@@ -24,25 +23,24 @@ const TextMaskCustom = React.forwardRef(function TextMaskCustom(props) {
     onChange: PropTypes.func.isRequired,
   };
   
-  
-  
-  
-
 export default function CepTextField(props) {
     
     return(
         
-     <FormControl >
+     <FormControl   >
      
-        <OutlinedInput
+      <OutlinedInput
           className='CepText'
+          helperText="asds"
           placeholder='00000-000'
-          help
           name="textmask"
           id="formatted-text-mask-input"
           inputComponent={TextMaskCustom}
           {...props}
-        />
+      />
+         <FormHelperText >
+           Enter your ZIP with 8 caracters.
+         </FormHelperText>
      </FormControl>
       
 

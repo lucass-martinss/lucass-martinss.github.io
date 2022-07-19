@@ -56,7 +56,7 @@ export default function Main() {
               <SearchButton type="submit" disabled={cep.length !== 9} />
             </Stack>
           </form>
-      <Paper sx={{marginTop:"20px"}} elevation={3} >
+     
         <Stack direction="column"  sx={{ alignItems: "center" }}>
          
           {Array.from(addressList.entries()).map(([index, address]) => (
@@ -68,7 +68,7 @@ export default function Main() {
             />
           ))}
         </Stack>
-      </Paper>
+     
     </Container>
   );
 }

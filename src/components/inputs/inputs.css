@@ -1,3 +1,25 @@
 .CepText{
     height: 40px;
+    
+    
+}
+.CepCard{
+     width: 357px;
+     
+    
+     
+}
+.CardImage{
+   
+    width: 365px;
+    height: 200px ;
+}
+.CardCont{
+    padding: bottom 16px;
+    text-align: left ;
+}
+.IconDelete{
+    margin-bottom: 20px;
+    float: right;
+    justify-content: end;
 }

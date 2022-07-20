@@ -10,7 +10,7 @@ const TextMaskCustom = React.forwardRef(function TextMaskCustom(props) {
       <IMaskInput
         {...other}
         mask="00000-000"
-        
+       
        
         onAccept={(value) => onChange({ target: { name: props.name, value } })}
         
@@ -27,11 +27,10 @@ export default function CepTextField(props) {
     
     return(
         
-     <FormControl   >
+     <FormControl    >
      
       <OutlinedInput
           className='CepText'
-          helperText="asds"
           placeholder='00000-000'
           name="textmask"
           id="formatted-text-mask-input"

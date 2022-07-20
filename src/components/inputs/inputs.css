@@ -1,13 +1,14 @@
+input.MuiOutlinedInput-input{
+    padding: 7.5px 14px;
+  }
+
 .CepText{
     height: 40px;
-    
     
 }
 .CepCard{
      width: 357px;
-     
-    
-     
+      
 }
 .CardImage{
    

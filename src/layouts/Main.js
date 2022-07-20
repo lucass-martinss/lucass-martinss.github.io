@@ -1,6 +1,6 @@
 import CepTextField from "../components/inputs/CepTextField";
 import SearchButton from "../components/buttons/SearchButton";
-import { Stack, Container, Paper, Typography } from "@mui/material";
+import { Stack, Container, Typography } from "@mui/material";
 import { useState } from "react";
 import CepCard from "../components/cards/CepCard";
 import { ThemeProvider } from "@mui/material/styles";
@@ -45,7 +45,7 @@ export default function Main() {
           >
             <Stack mt={5} sx={{justifyContent:"center"}}
               direction="row"
-              spacing={1}
+              spacing={-5}
             >
               <CepTextField
                 value={cep}

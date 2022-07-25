@@ -67,7 +67,7 @@ export function ResponsiveDrawer(props) {
         </ListItem>
 
         <ListItem>
-          <ListItemButton to="#/busca-cep">
+          <ListItemButton to="#/busca-cep/">
             <ListItemIcon>
               <CodeIcon />
             </ListItemIcon>

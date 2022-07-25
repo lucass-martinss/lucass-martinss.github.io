@@ -14,6 +14,7 @@ export default function Main() {
   const handleChange = (event) => {
     setCep(event.target.value);
   };
+  
 
   const handleClick = async () => {
     const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);

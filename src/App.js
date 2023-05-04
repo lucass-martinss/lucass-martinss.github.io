@@ -16,6 +16,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/busca-cep" element={<BuscaCep />} />
+          <Route path="/checklist"/>
         </Routes>
       
     </>

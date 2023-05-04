@@ -2,7 +2,7 @@ import { IconButton } from "@mui/material";
 import  SearchIcon  from "@mui/icons-material/Search"
 
 
-export default function SearchButton(props) {
+ function SearchButton(props) {
     
   return (
       
@@ -12,3 +12,4 @@ export default function SearchButton(props) {
   
   );
 }
+export default SearchButton();

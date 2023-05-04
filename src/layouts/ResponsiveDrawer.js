@@ -10,7 +10,7 @@ import { Typography, Toolbar, ListItemText, ListItemIcon,
          Box, Stack, Link,CssBaseline, Divider, Drawer } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import CodeIcon from "@mui/icons-material/Code";
-
+import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 const drawerWidth = 220;
 
 export function ResponsiveDrawer(props) {
@@ -76,11 +76,11 @@ export function ResponsiveDrawer(props) {
         </ListItem>
 
         <ListItem>
-          <ListItemButton target="_blank" to="https://vivazbrand.com.br/">
+          <ListItemButton to="#/check-list/">
             <ListItemIcon>
-              <img alt="icone vivaz" src="/vivaz-icon.png" />
+             <PlaylistAddCheckIcon/>
             </ListItemIcon>
-            <ListItemText primary="Site Vivaz" />
+            <ListItemText primary="checklist" />
           </ListItemButton>
         </ListItem>
       </List>
